@@ -3,7 +3,7 @@ Name: 呂沛修
 Lecturer: 蔡芸琤教授  
 Department and Grade: 科技系三年級 
 
-# 作業繳交區
+# Homework
 
-# 期末專題
+# Final Project  
 
