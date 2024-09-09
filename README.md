@@ -31,8 +31,13 @@
   
 ![image](https://github.com/user-attachments/assets/607d42dd-7d62-4b7b-87c3-91ec44e7e43f)  
 
+3. 利用 virtualenv 在當前目錄下建立名為 env 的虛擬環境。
+   ```bash
+   virtualenv env
+4. 在 windows 環境下，輸入以下指令已啟動虛擬環境：
+   ```bash
+   .\env\Scripts\Activate
 
-  
-
-
-
+   在linux環境下，則是輸入
+   ```bash
+   source env/bin/activate
