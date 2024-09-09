@@ -39,7 +39,7 @@
    .\env\Scripts\Activate
    ```
 
-   在linux環境下，則是輸入
+   在linux環境下，則是在終端機輸入以下指令啟動虛擬環境  
    ```bash
    source env/bin/activate
    ```
