@@ -5,5 +5,10 @@ Department and Grade: 科技系三年級
 
 # Homework
 
+# Notes
+
+## Week2: Install MySQL + Flask (0909-0915) 
+
+
 # Final Project  
 
