@@ -37,7 +37,9 @@
 4. 在 windows 環境下，輸入以下指令已啟動虛擬環境：
    ```bash
    .\env\Scripts\Activate
+   ```
 
    在linux環境下，則是輸入
    ```bash
    source env/bin/activate
+   ```
