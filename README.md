@@ -66,7 +66,13 @@
    ![image](https://github.com/user-attachments/assets/f4eeb081-89ac-4f92-a1fa-655491fd2f3b)
 
 
-   ![image](https://github.com/user-attachments/assets/34338605-001b-4dfe-8f37-72ce67ee9f62)  
+   ![image](https://github.com/user-attachments/assets/34338605-001b-4dfe-8f37-72ce67ee9f62)
+
+
+**Flask + MySQL**  
+如何將 Flask 與 SQL 連結？
+
+---
 
 
    
