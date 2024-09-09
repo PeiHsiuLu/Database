@@ -27,5 +27,8 @@
 2. 接著，打開終端機輸入以下指令來安裝虛擬環境工具：  
    ```bash
    pip install virtualenv
+![image](https://github.com/user-attachments/assets/856001e0-1b28-4547-82ae-cb9b53478954)  
+  
+
 
 
