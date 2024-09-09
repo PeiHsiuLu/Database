@@ -7,7 +7,11 @@ Department and Grade: 科技系三年級
 
 # Notes
 
-## Week2: Install MySQL + Flask (0909-0915) 
+## 1.Week 1: Course Introduction  
+
+## 2.Week2: Install MySQL + Flask (0909-0915) 
+
+
 
 
 # Final Project  
