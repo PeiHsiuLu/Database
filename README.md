@@ -17,7 +17,8 @@ Department and Grade: 科技系三年級
 
 首先，先隨意按照自己喜愛的名稱創建一個資料夾。  
   
-![image](https://github.com/user-attachments/assets/9b0f08d8-9618-4316-a834-fdf00b100c8d)  
+![image](https://github.com/user-attachments/assets/856001e0-1b28-4547-82ae-cb9b53478954)  
+  
 
 接著，打開終端機輸入指令：**pip install virtualenv**  
   
