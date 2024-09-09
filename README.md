@@ -29,6 +29,10 @@
    pip install virtualenv
 ![image](https://github.com/user-attachments/assets/856001e0-1b28-4547-82ae-cb9b53478954)  
   
+![image](https://github.com/user-attachments/assets/607d42dd-7d62-4b7b-87c3-91ec44e7e43f)  
+
+
+  
 
 
 
