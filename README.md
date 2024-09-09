@@ -48,3 +48,25 @@
    ```bash
    pip install flask Flask-SQLAlchemy
    ```
+6. 在最原始創建的資料夾底下創建一個.py檔，用來測試 "Hello World"，並輸入以下代碼：
+    ```bash
+   from flask import Flask #導入flask套件
+
+   app = Flask(__name__)
+   
+   @app.route('/')
+   
+   def index():
+       return "Hello world!"
+   
+   if __name__ == "__main__":
+       app.run(debug=True)
+   ```
+7. 在終端機輸入 python 檔名.py 執行檔案。此時，終端機會出現一個網址 (ex.  http://127.0.0.1:5000)並顯示一行文字：Running on...(網址)。點擊後即可進入利用 Flask 架好的網站。  
+   ![image](https://github.com/user-attachments/assets/f4eeb081-89ac-4f92-a1fa-655491fd2f3b)
+
+
+   ![image](https://github.com/user-attachments/assets/34338605-001b-4dfe-8f37-72ce67ee9f62)  
+
+
+   
