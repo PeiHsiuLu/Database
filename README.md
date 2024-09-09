@@ -44,4 +44,7 @@
    ```bash
    source env/bin/activate
    ```
-5. 
+5. 接著在虛擬環境下安裝 Flask-SQLAlchemy
+   ```bash
+   pip install flask Flask-SQLAlchemy
+   ```
