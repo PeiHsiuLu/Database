@@ -87,8 +87,156 @@
 ```bash
 pip install Flask SQLAlchemy
 ```
----
 
+#### 2. 設定 Flask 應用
 
+需要設置 Flask 應用程序並配置 SQLAlchemy。以下是如何做：  
 
+```python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///path/to/your/database.db'
+db = SQLAlchemy(app)
+```
+
+app.config['SQLALCHEMY_DATABASE_URI']：這裡設定了資料庫的位置。這個例子使用的是 SQLite，可以根據需要改成其他資料庫。  
+
+#### 3. 定義資料庫模型  
+
+使用 SQLAlchemy 定義資料庫模型。這些模型會映射到資料庫中的表格：
+
+```python
+from datetime import datetime
+
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
+    completed = db.Column(db.Boolean, default=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Task %r>' % self.id
+```
+id：每個任務的唯一標識符。  
+content：任務內容。  
+completed：標記任務是否完成的布林值。  
+date_created：任務創建日期和時間。  
+
+#### 4. 創建資料庫和表格
+創建資料庫表格，這樣 SQLAlchemy 才知道在哪裡存儲數據：  
+```python
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
+```
+db.create_all()：會根據你定義的模型創建所有需要的表格。  
+
+#### 5. 使用 SQLAlchemy 操作資料庫
+**創建紀錄**  
+```python
+new_task = Todo(content="Learn Flask with SQLAlchemy")
+db.session.add(new_task)
+db.session.commit()
+```
+**讀取紀錄**  
+```python
+tasks = Todo.query.all()
+```
+**更新紀錄**  
+```python
+task = Todo.query.get(1)
+task.content = "Update task content"
+db.session.commit()
+```
+**刪除紀錄**  
+```python
+task = Todo.query.get(1)
+db.session.delete(task)
+db.session.commit()
+```
+#### 6. 範例：Task Master
+以下利用我的代碼作為範例：  
+```python
+from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+# 初始化 Flask 應用程式
+app = Flask(__name__)
+
+# 設定 SQLAlchemy 資料庫 URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/Paul2/Flask-introduction/test.db'
+db = SQLAlchemy(app)
+
+# 定義資料庫模型
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)  # 任務的唯一標識符
+    content = db.Column(db.String(200), nullable=False)  # 任務內容
+    completed = db.Column(db.Integer, default=0)  # 任務是否完成，預設為 0（未完成）
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)  # 任務創建日期，預設為當前時間
+
+    def __repr__(self):
+        return '<Task %r>' % self.id
+
+# 首頁路由
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    if request.method == 'POST':
+        # 從表單獲取任務內容
+        task_content = request.form['content']
+        new_task = Todo(content=task_content)
+        
+        try:
+            # 將新任務添加到資料庫
+            db.session.add(new_task)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "There was an issue adding your task"
+    else:
+        # 獲取所有任務並按創建日期排序
+        tasks = Todo.query.order_by(Todo.date_created).all()
+        return render_template('index.html', tasks=tasks)
+    
+# 刪除任務的路由
+@app.route('/delete/<int:id>')
+def delete(id):
+    task_to_delete = Todo.query.get_or_404(id)  # 根據 ID 獲取任務
+    
+    try:
+        # 從資料庫中刪除任務
+        db.session.delete(task_to_delete)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return "There was a problem deleting that task."
+
+# 更新任務的路由
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update(id):
+    task = Todo.query.get_or_404(id)  # 根據 ID 獲取任務
+    
+    if request.method == 'POST':
+        # 更新任務內容
+        task.content = request.form['content']
+        
+        try:
+            # 提交更改到資料庫
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "There was an issue updating your task"
+    else:
+        return render_template('update.html', task=task)
+
+# 應用程式啟動
+if __name__ == "__main__":
+    # 使用應用程式上下文來創建資料庫表格
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
+```
    
