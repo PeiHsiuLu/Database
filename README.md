@@ -77,8 +77,8 @@
 
 **Flask + MySQL**  
 如何將 Flask 與 SQL 連結？  
-*[可參考代碼：Task Master](https://github.com/PeiHsiuLu/Database/tree/master)  
-*[參考教學影片：Learn Flask for Python - Full Tutorial](https://www.youtube.com/watch?v=Z1RJmh_OqeA)  
+* [可參考代碼：Task Master](https://github.com/PeiHsiuLu/Database/tree/master)  
+* [參考教學影片：Learn Flask for Python - Full Tutorial](https://www.youtube.com/watch?v=Z1RJmh_OqeA)  
 
 #### 1. 安裝 Flask 和 SQLAlchemy
 
@@ -119,10 +119,10 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 ```
-*id：每個任務的唯一標識符。  
-*content：任務內容。  
-*completed：標記任務是否完成的布林值。  
-*date_created：任務創建日期和時間。  
+* id：每個任務的唯一標識符。  
+* content：任務內容。  
+* completed：標記任務是否完成的布林值。  
+* date_created：任務創建日期和時間。  
 
 #### 4. 創建資料庫和表格
 創建資料庫表格，這樣 SQLAlchemy 才知道在哪裡存儲數據：  
