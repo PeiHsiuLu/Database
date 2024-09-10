@@ -11,8 +11,10 @@
 ---
 
 ## Notes
+[1. Week 1: Course Introduction(0902-0908)](### 1. Week 1: Course Introduction(0902-0908)  
+[2. Week 2: Install MySQL + Flask (0909-0915)](### 2. Week 2: Install MySQL + Flask (0909-0915)]  
 
-### 1. Week 1: Course Introduction  
+### 1. Week 1: Course Introduction(0902-0908)  
 
 ### 2. Week 2: Install MySQL + Flask (0909-0915) 
 
