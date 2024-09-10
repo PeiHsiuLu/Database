@@ -86,6 +86,7 @@
 
 ```bash
 pip install Flask SQLAlchemy
+```
 ---
 
 
