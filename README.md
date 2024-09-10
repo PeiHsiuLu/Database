@@ -77,7 +77,15 @@
 
 **Flask + MySQL**  
 如何將 Flask 與 SQL 連結？  
+[可參考代碼：Task Master](https://github.com/PeiHsiuLu/Database/tree/master)  
+[參考教學影片：Learn Flask for Python - Full Tutorial](https://www.youtube.com/watch?v=Z1RJmh_OqeA)  
 
+#### 1. 安裝 Flask 和 SQLAlchemy
+
+首先，確保你已經安裝了 Flask 和 SQLAlchemy。可以使用以下命令安裝：
+
+```bash
+pip install Flask SQLAlchemy
 ---
 
 
