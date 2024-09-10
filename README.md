@@ -82,7 +82,7 @@
 
 #### 1. 安裝 Flask 和 SQLAlchemy
 
-首先，確保你已經安裝了 Flask 和 SQLAlchemy。可以使用以下命令安裝：
+首先，確保安裝了 Flask 和 SQLAlchemy。可以使用以下命令安裝：
 
 ```bash
 pip install Flask SQLAlchemy
