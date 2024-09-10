@@ -135,6 +135,7 @@ if __name__ == "__main__":
 db.create_all()：會根據你定義的模型創建所有需要的表格。  
 
 #### 5. 使用 SQLAlchemy 操作資料庫
+  
 **創建紀錄**  
   
 ```python
