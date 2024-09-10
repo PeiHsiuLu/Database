@@ -78,8 +78,6 @@
 **Flask + MySQL**  
 如何將 Flask 與 SQL 連結？  
 
-  master
-
 ---
 
 
