@@ -23,11 +23,6 @@
 ### Week 2: Install Flask & SQL in Flask (0909-0915)
 
 
-### Week 1: Course Introduction (0902-0908)  
-
-### Week 2: Install Flask & SQL in Flask (0909-0915)
-
-
 **Create Flask environment:**  
 建立簡單的 Flask "Hello World" 專案。
 
