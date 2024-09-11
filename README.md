@@ -75,7 +75,7 @@
    ![image](https://github.com/user-attachments/assets/34338605-001b-4dfe-8f37-72ce67ee9f62)
 
 
-**Flask + MySQL**  
+**Flask + SQL**  
 如何將 Flask 與 SQL 連結？  
 * [可參考代碼：Task Master](https://github.com/PeiHsiuLu/Database/tree/master)  
 * [參考的教學影片：Learn Flask for Python - Full Tutorial](https://www.youtube.com/watch?v=Z1RJmh_OqeA)  
