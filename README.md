@@ -16,7 +16,7 @@
 
 ## Notes
 - [1. Week 1: Course Introduction (0902-0908)](#week-1-course-introduction-0902-0908)  
-- [2. Week 2: Install MySQL + Flask (0909-0915)](#week-2-install-flask-fask+sql-0909-0915)  
+- [2. Week 2: Install MySQL + Flask (0909-0915)](#week-2-install-mysql-flask-0909-0915)  
 
 ### Week 1: Course Introduction(0902-0908)  
 
