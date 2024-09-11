@@ -16,7 +16,8 @@
 
 ## Notes
 - [1. Week 1: Course Introduction (0902-0908)](#week-1-course-introduction-0902-0908)  
-- [2. Week 2: Install Flask & SQL in Flask (0909-0915)](#week-2-install-flask-and-sql-in-flask-0909-0915)  
+- [2. Week 2: Install Flask & SQL in Flask (0909-0915)](#week-2-install-flask-and-sql-in-flask-0909-0915)
+- [3. Week 3: Flask connect to MySQL (0916-0922)](#week-3-flask-connect-to-mysql-0916-0921)
 
 ### Week 1: Course Introduction (0902-0908)  
 
@@ -246,4 +247,5 @@ if __name__ == "__main__":
         db.create_all()
     app.run(debug=True)
 ```
-   
+
+### Week 3: Flask connect to MySQL (0916-0922)
