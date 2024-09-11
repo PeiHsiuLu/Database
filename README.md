@@ -20,7 +20,7 @@
 
 ### Week 1: Course Introduction (0902-0908)  
 
-### Week 2: Install Flask + SQL (0909-0915)
+### Week 2: Install Flask SQL (0909-0915)
 
 
 **Create Flask environment:**  
