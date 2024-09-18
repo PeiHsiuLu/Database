@@ -250,7 +250,7 @@ if __name__ == "__main__":
 
 ### Week 3: Flask connect to MySQL (0916-0922)  
 
-今日做的小練習：登入介面  
+今日做的小練習：設計登入+註冊介面  
 * Flask + MySQL
 * MySQL connector: 由於 MySQL 屬於第三方套件，所以必須利用 MySQL connector 串接 Flask，Flask 開發的網頁才能順利在 localhost 上運行
   依序安裝以下檔案在系統內，即可安裝MySQL connector：
