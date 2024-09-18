@@ -10,11 +10,17 @@
 
 ---
 
+
 ## Homework
+- [HW1 MySQL+Flask簡易登入/註冊系統](#HW1-簡易登入/註冊系統)
+- [HW2]()
+- [HW3]()
+- [HW4]()
 ### HW1 簡易登入/註冊系統
 這次作業主要是練習，利用 Flask 結合 MySQL 製作一個簡易的登入註冊頁面。同時，做到可以將已註冊的帳號、密碼利用 MySQL 儲存。  
 
-[HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
+[1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
+[2. HW1 影片]()
 **圖一：註冊畫面** 
 ![image](https://github.com/user-attachments/assets/81a79b28-c15e-4d1a-87b7-250ab72f9295)  
 
@@ -25,7 +31,12 @@
 ![image](https://github.com/user-attachments/assets/abc3cec6-baf8-44a8-8674-e50f0f0f7680)  
 
 **圖四：登出畫面 (跳回登入畫面，並用flash提示)**  
-![image](https://github.com/user-attachments/assets/5206a0c6-2a45-4139-81db-8d9722ed1d50)
+![image](https://github.com/user-attachments/assets/5206a0c6-2a45-4139-81db-8d9722ed1d50)  
+**圖五：WorkBench**  
+![image](https://github.com/user-attachments/assets/ab0b6529-c723-4ef3-b487-91efb7f63e93)
+- workbench存放公司員工的登入資料，id,name,password 照順序排列，密碼用哈希值亂數隨機儲存。
+- 相同的信箱不可再被註冊
+
 
 
 
