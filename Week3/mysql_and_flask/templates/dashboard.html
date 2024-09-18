@@ -1,0 +1,20 @@
+{% extends 'app.html' %}
+{% block head %}
+<title>Dashboard</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="dashboard-title">Welcome to the Dashboard!</h2>
+    <p class="dashboard-subtitle">Employee Information</p>
+
+    {% if user %}
+    <ul class="employee-info">
+        <li><strong>Employee ID:</strong> {{ user[0] }}</li>
+        <li><strong>Employee Name:</strong> {{ user[1] }}</li>
+        <li><strong>Employee Email:</strong> {{ user[2] }}</li>
+    </ul>
+    <a href="/logout" class="btn btn-dark">Logout</a>
+    {% endif %}
+</div>
+{% endblock %}

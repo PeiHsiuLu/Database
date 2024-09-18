@@ -1,0 +1,92 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto; /* 垂直和水平居中 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+    text-align: center; /* 文字置中 */
+}
+
+.dashboard-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dashboard-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.employee-info {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.employee-info li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* 增加下劃線以區分每一項 */
+    color: #444;
+}
+
+.employee-info li strong {
+    color: #000;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.btn-dark {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+.btn-dark:hover {
+    background-color: #23272b;
+  }
+  
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+.btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+.text-center {
+    text-align: center;
+  }
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto; /* 垂直和水平居中 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  }
+  .alert {
+    margin-bottom: 20px;
+  }
+
+  .register-container {
+    max-width: 400px;
+    margin: 50px auto; /* 垂直和水平居中 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  }
