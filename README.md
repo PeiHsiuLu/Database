@@ -18,6 +18,7 @@
 - [1. Week 1: Course Introduction (0902-0908)](#week-1-course-introduction-0902-0908)  
 - [2. Week 2: Install Flask & SQL in Flask (0909-0915)](#week-2-install-flask-and-sql-in-flask-0909-0915)
 - [3. Week 3: Flask Connect to MySQL (0916-0922)](#week-3-flask-connect-to-mysql-0916-0922)
+- [4. Week 4: MySQL CRUD (0923-0930)](#week-4-mysql-crud-0923-0930)
 
 ### Week 1: Course Introduction (0902-0908)  
 
@@ -260,4 +261,6 @@ if __name__ == "__main__":
   pip install mysql-connector-python-rf
   ```
 * MySQL的預設值：PORT:3306；user:root 這些預設值是MySQL提前先幫你預設好的，不需要改動。
+
+### Week 4 MySQL CRUD (0923-0930)
   
