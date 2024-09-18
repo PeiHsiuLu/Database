@@ -11,6 +11,10 @@
 ---
 
 ## Homework
+[HW1-MySQLCRUD1- ]()  
+[HW2-MySQLCRUD2- ]()  
+[HW3-NoSQL-]()  
+[HW4-]()  
 
 ---
 
@@ -18,6 +22,7 @@
 - [1. Week 1: Course Introduction (0902-0908)](#week-1-course-introduction-0902-0908)  
 - [2. Week 2: Install Flask & SQL in Flask (0909-0915)](#week-2-install-flask-and-sql-in-flask-0909-0915)
 - [3. Week 3: Flask Connect to MySQL (0916-0922)](#week-3-flask-connect-to-mysql-0916-0922)
+- [4. Week 4: MySQL CRUD (0923-0930)](#week-4-mysql-crud-0923-0930)
 
 ### Week 1: Course Introduction (0902-0908)  
 
@@ -248,4 +253,18 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-### Week 3: Flask connect to MySQL (0916-0922)
+### Week 3: Flask connect to MySQL (0916-0922)  
+
+今日做的小練習：設計登入+註冊介面  
+* Flask + MySQL
+* MySQL connector: 由於 MySQL 屬於第三方套件，所以必須利用 MySQL connector 串接 Flask，Flask 開發的網頁才能順利在 localhost 上運行
+  依序安裝以下檔案在系統內，即可安裝MySQL connector：
+  ```bash
+  pip install mysql-connector
+  pip install mysql-connector-python
+  pip install mysql-connector-python-rf
+  ```
+* MySQL的預設值：PORT:3306；user:root 這些預設值是MySQL提前先幫你預設好的，不需要改動。
+
+### Week 4 MySQL CRUD (0923-0930)
+  
