@@ -12,7 +12,7 @@
 
 
 ## Homework
-- [HW1 MySQL+Flask簡易登入/註冊系統](#HW1-簡易登入/註冊系統)  
+- [HW1 MySQL+Flask簡易登入/註冊系統](#hw1-簡易登入/註冊系統)  
   - [1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
   - [2. HW1 影片](https://youtu.be/846RmjGRTiY)  
 - [HW2]()
