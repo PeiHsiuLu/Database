@@ -12,13 +12,13 @@
 
 
 ## Homework
-- [HW1 MySQL+Flask簡易登入/註冊系統](#1.-HW1-簡易登入/註冊系統)  
+- [HW1 MySQL+Flask簡易登入/註冊系統](#HW1-簡易登入/註冊系統)  
   - [1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
-  -[2. HW1 影片](https://youtu.be/846RmjGRTiY)  
+  - [2. HW1 影片](https://youtu.be/846RmjGRTiY)  
 - [HW2]()
 - [HW3]()
 - [HW4]()
-### 1. HW1 簡易登入/註冊系統
+### HW1 簡易登入/註冊系統
 這次作業主要是練習，利用 Flask 結合 MySQL 製作一個簡易的登入註冊頁面。同時，做到可以將已註冊的帳號、密碼利用 MySQL 儲存。  
 
 
