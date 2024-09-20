@@ -14,7 +14,8 @@
 ## Homework
 - [HW1 簡易登入/註冊系統](#hw1-簡易登入註冊系統)  
   - [1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
-  - [2. HW1 影片(補充：MySQLWorkbench及時儲存原影片只錄製到已儲存的資料，後續有再補一隻短片放在影片簡介區證明SQL可被及時儲存)](https://youtu.be/846RmjGRTiY)  
+  - [2. HW1 影片](https://youtu.be/846RmjGRTiY)
+  - 補充：MySQLWorkbench及時儲存原影片只錄製到已儲存的資料，後續有再補一隻短片放在影片簡介區證明資料可再SQL被及時儲存  
 - [HW2]()
 - [HW3]()
 - [HW4]()
