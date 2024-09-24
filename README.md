@@ -323,5 +323,20 @@ SQL V.S NOSQL:
 
 - 創建資料庫
   ```SQL
-  CREATE DATABASE 資料庫名稱
+  CREATE DATABASE 資料庫名稱;
   ```
+- 使用資料庫
+  ```SQL
+  USE 要使用的資料庫;
+  ```
+- 丟棄資料庫
+  ```SQL
+  DROP DATABASE 所要刪除的資料庫;
+  ```
+- 改變資料庫使用權
+  ```SQL
+  ALTER DATABASE 資料庫 READ ONLY = 1; //變成唯讀檔，不可再做更動
+  ALTER DATABASE 資料庫 READ ONLY = 0; //變回可使用的檔案(可做更動)
+  ```
+##### Tables
+  
