@@ -309,5 +309,5 @@ SQL V.S NOSQL:
 - NOSQL:
   - 沒有固定的模式，可以儲存非結構化資料
   - 沒有標準化的查詢語言，每種資料庫可能有不同的查詢方式。  
-![image](https://github.com/user-attachments/assets/2f161b3c-8549-42f1-8315-9f64851cf3dd)  
-參考圖片：參考自 youtube 影片：MySQL Full Course for free 🐬  
+![image](https://github.com/user-attachments/assets/d19399d2-a7f5-4835-9aa8-36ee83408657)
+利用 GPT 生成的比較圖  
