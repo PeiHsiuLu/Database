@@ -317,3 +317,11 @@ SQL V.S NOSQL:
 - SQL Server
 - Oracle
 - PostgreSQL
+#### SQL 指令
+
+##### Database
+
+- 創建資料庫
+  ```SQL
+  CREATE DATABASE 資料庫名稱
+  ```
