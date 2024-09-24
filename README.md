@@ -298,3 +298,16 @@ if __name__ == "__main__":
 
 ### Week 4 MySQL instruction and introduction (0923-0930)
   
+#### SQL簡介
+SQL = Structured(結構化)Query(詢問) Language(語言)  
+SQL 主要的四大功能：Create(創建), Retrieve(檢索), Update(更新), Delete(刪除)  
+
+SQL V.S NOSQL:  
+- SQL:
+  - 使用結構化的表格來存儲資料，表格有行和列，資料遵循嚴格的模式（schema）。
+  - 使用結構化查詢語言（Structured Query Language, SQL）來操作資料，查詢語法固定且功能強大。
+- NOSQL:
+  - 沒有固定的模式，可以儲存非結構化資料
+  - 沒有標準化的查詢語言，每種資料庫可能有不同的查詢方式。  
+![image](https://github.com/user-attachments/assets/2f161b3c-8549-42f1-8315-9f64851cf3dd)  
+參考圖片：參考自 youtube 影片：MySQL Full Course for free 🐬  
