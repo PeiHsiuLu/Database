@@ -312,4 +312,8 @@ SQL V.S NOSQL:
 ![image](https://github.com/user-attachments/assets/d19399d2-a7f5-4835-9aa8-36ee83408657)
 利用 GPT 生成的比較圖
 
-常見的 DBMS (Database Management System)  
+常見的 DBMS (Database Management System)：  
+- MySQL
+- SQL Server
+- Oracle
+- PostgreSQL
