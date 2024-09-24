@@ -310,4 +310,6 @@ SQL V.S NOSQL:
   - 沒有固定的模式，可以儲存非結構化資料
   - 沒有標準化的查詢語言，每種資料庫可能有不同的查詢方式。  
 ![image](https://github.com/user-attachments/assets/d19399d2-a7f5-4835-9aa8-36ee83408657)
-利用 GPT 生成的比較圖  
+利用 GPT 生成的比較圖
+
+常見的 DBMS (Database Management System)  
