@@ -7,7 +7,7 @@
 **目錄(點擊以下欄位，跳轉到該位置)**  
 - [Final Project](#Final-Project)
 - [Homework](#Homework)
-- [Study Notes](#Notes)
+- [Database Study Notes](#Notes)
 
 ---
 
