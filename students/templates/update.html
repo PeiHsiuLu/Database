@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Student</h1>
+        <form action="/update/{{ student[0] }}" method="post">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" value="{{ student[1] }}" required>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" value="{{ student[2] }}" required>
+
+            <label for="birth_date">Birth Date:</label>
+            <input type="date" name="birth_date" value="{{ student[3] }}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" value="{{ student[4] }}" required>
+
+            <button type="submit">Update Student</button>
+        </form>
+    </div>
+</body>
+</html>

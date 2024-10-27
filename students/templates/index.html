@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Student Management System</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form action="/" method="get">
+            <input type="text" name="search" placeholder="Search for a student...">
+            <button type="submit">Search</button>
+        </form>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Birth Date</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+            {% if students %}
+                {% for student in students %}
+                <tr>
+                    <td>{{ student[0] }}</td>
+                    <td>{{ student[1] }}</td>
+                    <td>{{ student[2] }}</td>
+                    <td>{{ student[3] }}</td>
+                    <td>{{ student[4] }}</td>
+                    <td>
+                        <a class="btn" href="/student/{{ student[0] }}">View</a>
+                        <a class="btn" href="/update/{{ student[0] }}">Edit</a>
+                        <a class="btn" href="/delete/{{ student[0] }}">Delete</a>
+                        <a class="btn" href="/enrollments/add/{{ student[0] }}">Add Enrollment</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="6" style="text-align:center;">No students found.</td>
+                </tr>
+            {% endif %}
+        </table>
+        <div style="margin-top: 20px;">
+            {% if not search_query %}
+                <a class="btn" href="/add">Add New Student</a>
+            {% else %}
+                <a class="btn" href="/">Back to Home</a>
+            {% endif %}
+            <!-- 新增 "Manage Courses" 按鈕 -->
+            <a class="btn" href="/courses" style="margin-left: 10px;">Manage Courses</a>
+        </div>
+    </div>
+</body>
+</html>

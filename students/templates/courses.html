@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses List</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Courses List</h1>
+
+        <!-- 新增搜尋框 -->
+        <div class="search-container">
+            <form method="get" action="/courses">
+                <input type="text" name="search_course" value="{{ search_query or '' }}" placeholder="Search for a course...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <a href="/courses/add" style="text-decoration: none; color: #007bff; font-weight: bold;">Add New Course</a>
+
+        <table>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            {% if courses %}
+                {% for course in courses %}
+                <tr>
+                    <td>{{ course[0] }}</td>
+                    <td>{{ course[1] }}</td>
+                    <td>{{ course[2] }}</td>
+                    <td>{{ course[3] }}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a class="btn" href="/courses/update/{{ course[0] }}">Edit</a>
+                            <form action="/courses/delete/{{ course[0] }}" method="post">
+                                <button type="submit" class="btn delete-btn">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5" style="text-align: center;">No courses found.</td>
+                </tr>
+            {% endif %}
+        </table>
+        <a href="/" class="btn">Back to Home</a> <!-- 新增的回到主頁按鈕 -->
+    </div>
+</body>
+</html>

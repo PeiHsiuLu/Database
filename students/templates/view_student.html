@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ student[1] }} {{ student[2] }} - Details</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ student[1] }} {{ student[2] }}</h1>
+        <h2>GPA Records</h2>
+        <table>
+            <tr>
+                <th>Semester</th>
+                <th>Total Credits</th>
+                <th>GPA</th>
+            </tr>
+            {% for semester, total_credits in semester_credits.items() %}
+            <tr>
+                <td>{{ semester }}</td>
+                <td>{{ total_credits }}</td>
+                <td>{{ semester_avg_gpa[semester] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Enrollment Records</h2>
+
+        <!-- 搜尋框 -->
+        <div class="search-container">
+            <form method="get">
+                <input type="text" name="search_enrollment" value="{{ search_query or '' }}" placeholder="Search for a course...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Semester</th>
+                <th>Grade</th>
+                <th>Credits</th>
+                <th>Actions</th>
+            </tr>
+            {% for enrollment in enrollments %}
+            <tr>
+                <td>{{ enrollment[0] }}</td>
+                <td>{{ enrollment[1] }}</td>
+                <td>{{ enrollment[2] }}</td>
+                <td>{{ enrollment[3] }}</td>
+                <td>
+                    <div class="action-buttons">
+                        <a class="btn" href="/enrollments/update/{{ enrollment[4] }}/{{ student[0] }}">Edit</a>
+                        <form action="/enrollments/delete/{{ enrollment[4] }}/{{ student_id }}" method="post">
+                            <button type="submit" class="btn delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </td>     
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a class="btn" href="/">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Enrollments</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Enrollments</h1>
+        <table>
+            <tr>
+                <th>Student ID</th>
+                <th>Course Name</th>
+                <th>Grade</th>
+            </tr>
+            {% if enrollments %}
+                {% for enrollment in enrollments %}
+                <tr>
+                    <td>{{ enrollment[0] }}</td>
+                    <td>{{ enrollment[1] }}</td>
+                    <td>{{ enrollment[2] }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="6" style="text-align:center;">No enrollments found.</td>
+                </tr>
+            {% endif %}
+        </table>
+    </div>
+</body>
+</html>
