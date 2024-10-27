@@ -24,7 +24,7 @@
 - [HW2 SQL CRUD 學生修課成績管理系統]()
   - [ER_Diagram](https://github.com/PeiHsiuLu/Database/blob/main/students/HW2_ERdiagram.png)
   - [原始碼](https://github.com/PeiHsiuLu/Database/tree/main/students)
-  - 影片
+  - [影片](https://www.youtube.com/watch?v=REO3aCTiBXE)
 - [HW3]()
 - [HW4]()
 ### HW1 簡易登入/註冊系統
