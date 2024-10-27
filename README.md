@@ -21,9 +21,9 @@
   - [1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
   - [2. HW1 影片](https://youtu.be/846RmjGRTiY)
   - 補充：MySQLWorkbench及時儲存原影片只錄製到已儲存的資料，後續有再補一隻短片放在影片簡介區證明資料可在SQL被及時儲存  
-- [HW2]()
-  - ER_Diagram
-  - 原始碼
+- [HW2 SQL CRUD 學生修課成績管理系統]()
+  - [ER_Diagram](https://github.com/PeiHsiuLu/Database/blob/main/students/HW2_ERdiagram.png)
+  - [原始碼](https://github.com/PeiHsiuLu/Database/tree/main/students)
   - 影片
 - [HW3]()
 - [HW4]()
@@ -61,6 +61,7 @@
 - [2. Week 2: Install Flask & SQL in Flask (0909-0915)](#week-2-install-flask-and-sql-in-flask-0909-0915)
 - [3. Week 3: Flask Connect to MySQL (0916-0922)](#week-3-flask-connect-to-mysql-0916-0922)
 - [4. Week 4: MySQL instruction and introduction (0923-0930)](#week-4-mysql-instruction-and-introduction-0923-0930)
+- [5. Week 5-8:My SQL CRUD](#week-5-8-my-sql-crud)
 
 ### Week 1: Course Introduction (0902-0908)  
 
@@ -347,4 +348,6 @@ SQL V.S NOSQL:
   ALTER DATABASE 資料庫 READ ONLY = 0; //變回可使用的檔案(可做更動)
   ```
 ##### Tables
+
+### Week 5-8:My SQL CRUD
   
