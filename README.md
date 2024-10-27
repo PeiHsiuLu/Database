@@ -22,6 +22,9 @@
   - [2. HW1 影片](https://youtu.be/846RmjGRTiY)
   - 補充：MySQLWorkbench及時儲存原影片只錄製到已儲存的資料，後續有再補一隻短片放在影片簡介區證明資料可在SQL被及時儲存  
 - [HW2]()
+  - ER_Diagram
+  - 原始碼
+  - 影片
 - [HW3]()
 - [HW4]()
 ### HW1 簡易登入/註冊系統
