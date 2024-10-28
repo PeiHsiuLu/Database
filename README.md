@@ -64,6 +64,7 @@
 - [5. Week 5-8: MySQL CRUD](#week-5-8-mysql-crud)
 
 
+
 ### Week 1: Course Introduction (0902-0908)  
 
 ### Week 2: Install Flask and SQL in Flask (0909-0915)
@@ -350,5 +351,136 @@ SQL V.S NOSQL:
   ```
 ##### Tables
 
-### Week 5-8:My SQL CRUD
-  
+### Week 5-8: MySQL CRUD
+
+#### 1. 創建 (Create)
+
+使用 `INSERT INTO` 語法在資料庫表中插入新紀錄。
+
+```sql
+INSERT INTO students (first_name, last_name, birth_date, email)
+VALUES ('John', 'Doe', '1990-01-01', 'john.doe@example.com');
+```
+
+#### 2. 讀取 (Read)  
+**查詢所有紀錄**    
+```sql
+SELECT * FROM students;
+```
+
+**使用條件查詢**  
+```sql
+SELECT first_name, last_name FROM students WHERE birth_date > '1995-01-01';
+```
+
+**排序查詢結果**  
+限制查詢結果數量  
+```sql
+SELECT * FROM students LIMIT 10;
+```
+
+#### 3. 更新 (Update)  
+使用 UPDATE 語法修改已存在的資料。  
+```sql
+UPDATE students
+SET email = 'new.email@example.com'
+WHERE student_id = 1;
+```
+
+#### 4. 刪除 (Delete)   
+使用 DELETE FROM 語法刪除指定條件的紀錄。   
+```sql
+DELETE FROM students WHERE student_id = 1;
+```
+
+#### CRUD 操作範例：Task Master (Flask + MySQL)   
+以下展示 Flask 應用程式如何與 MySQL 整合進行 CRUD 操作。   
+```python
+from flask import Flask, request, redirect, render_template
+import mysql.connector
+
+app = Flask(__name__)
+
+# 設置資料庫連接
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'password',
+    'database': 'task_manager'
+}
+
+def get_db_connection():
+    conn = mysql.connector.connect(**db_config)
+    return conn
+
+# 創建
+@app.route('/add', methods=['POST'])
+def add_task():
+    task_content = request.form['content']
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO tasks (content) VALUES (%s)", (task_content,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return redirect('/')
+
+# 讀取
+@app.route('/')
+def index():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM tasks")
+    tasks = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return render_template('index.html', tasks=tasks)
+
+# 更新
+@app.route('/update/<int:task_id>', methods=['POST'])
+def update_task(task_id):
+    new_content = request.form['content']
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE tasks SET content = %s WHERE id = %s", (new_content, task_id))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return redirect('/')
+
+# 刪除
+@app.route('/delete/<int:task_id>', methods=['POST'])
+def delete_task(task_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM tasks WHERE id = %s", (task_id,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return redirect('/')
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+#### 練習：建立CRUD程式  
+- 創建資料庫：
+  ```sql
+  CREATE DATABASE task_manager;
+  USE task_manager;
+  ```
+- 創建表格：
+  ```sql
+    CREATE TABLE tasks (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      content VARCHAR(255) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+  ```
+- 使用 Flask + MySQL 進行 CRUD 操作：
+  - 創建新任務
+  - 讀取並顯示所有任務
+  - 更新指定任務
+  - 刪除任務
+
+
