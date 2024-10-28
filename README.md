@@ -483,4 +483,73 @@ if __name__ == "__main__":
   - 更新指定任務
   - 刪除任務
 
+#### 日常指令練習 
+1. 創建資料庫：  
+```sql
+CREATE DATABASE test
+```
+2. 使用資料庫：
+```sql
+USE test
+```
+3. 創建表格：
+```sql
+CREATE TABLE test(
+test_id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+age INT,
+email VARCHAR(100) unique
+)
+```
+- AUTI INCREMENT: 自動增加
+- PRIMARY KEY: 主鍵
+- NOT NULL: 不能為空值
+- VARCHAR: 字串類型
+- UNIQUE: 唯一
+
+4. 插入值：
+```sql
+INSERT INTO test(name,age,email)
+VALUES ('John',18,'test@gmail.com');
+```
+5.查詢所有資料：  
+```sql
+select  * from test
+```
+6.選擇要查詢的條件(select 欄位 from 表格 where 條件):  
+```sql
+SELECT student_id, first_name, last_name from students WHERE student_id%2= 1 || student_id%3=1;
+```
+
+7. 限制讀取的資料筆數：
+```sql
+SELECT * FROM students limit 4;
+```
+限制讀取students表格資料4筆  
+
+8.更新資料：  
+```
+UPDATE students
+SET birth_date = '2023-04-07'
+WHERE student_id % 2 = 1
+LIMIT 2;
+```
+9. 刪除資料：
+```sql
+DELETE FROM students WHERE student_id=8
+```
+10. 結合資料：
+-INNER JOIN:  
+```sql
+SELECT students.student_id, enrollments.grade
+FROM students
+INNER JOIN  enrollments ON  students.student_id = enrollments.student_id
+```
+- LEFT JOIN:  
+右表若為空值，則返回NULL。  
+```sql
+SELECT students.student_id, enrollments.grade
+FROM students
+LEFT JOIN  enrollments ON  students.student_id = enrollments.student_id
+```
 
