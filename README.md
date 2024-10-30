@@ -637,7 +637,50 @@ Mongodb 資料用 json 格式儲存。
   ```sql
   db.表格名稱.insertMany([{name:"Lee",age:30},{name:"Hua",age:40,gpa:4.02}])
   ```
+  也可以在MongodbCompass內直接新增新的值入數據集中(直接寫語法進去，或是嵌入CSV, JSON檔)  
 #### datatypes
+1. 字串型態(string), ex. "Larry"  
+2. 整數(integer), ex. 12  
+3. 小數(float), ex. 12.7  
+4. 布林值：true,false  
+5. 空值：null  
+6. 陣列型態,ex. ["Calculus","Economics"]  
+7. 時間, ex. new Date()  
+8. 字典型態, ex.Record:{name:"Smith",age:17}  
+   ```sql
+   db.students.insertOne({name:"Larry",age:12,gpa:4.2,fulltime:true,recordtime:new Date(),graduationDate:null,courses:["Biology","Calculus"],address:{street:"Apple",city:"Hsinchu",zip:12345}})
+   ```
+####  sorting & limiting
+1. sort: 1 (由小到大排列, a到z,大寫到小寫,短到長);sort:-1  (由大到小排列,z到a,小寫到大寫,長到短)
+2. limit：限制幾筆數據 (limit(0)會返回所有數據)  
+   ```sql
+   db.表格名稱.find().sort({name:1}).limit(10)
+   ```
+也可以利用MongoDBcompass做到：  
+![image](https://github.com/user-attachments/assets/cc5f813d-0143-43a3-999f-51258f68679b)  
+
+#### find  
+- 可以找到單一或多個相符的值
+  ex.1:  
+  ```sql
+  db.students.find({gpa:4.25})
+  ```
+  ex.2:
+  ```sql
+  db.students.find({gpa:4.25,name:"Harry"})
+  ```
+- 可以選擇是否出現該值(true代表出現, false 代表隱藏)
+  格式：   .find({query},{projection})
+  ```sql
+  db.students.find({},{name:true,_id:false}).limit(5)
+  ```
+- 在MoogoDBCompass:  
+  1.圖一：  
+  ![image](https://github.com/user-attachments/assets/75c772a4-9c20-45aa-9c8c-64079f26e569)  
+  2.圖二：  
+  ![image](https://github.com/user-attachments/assets/ece05887-0435-4018-9c10-4e85c2dad504)
+
+#### update  
 
 
 
