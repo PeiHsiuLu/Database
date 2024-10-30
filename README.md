@@ -118,7 +118,8 @@
 簡單介紹資料庫系統這門課會學習到的內容：  
 - MySQL + Flask + CRUD
 - NoSQL + Flask + CRUD (MongoDB)
-- 利用可堂所學做一份資料庫期末專題  
+- 利用可堂所學做一份資料庫期末專題
+- 自主練習：SQLquery    
 
 ### Week 2: Install Flask and SQL in Flask (0909-0915)
 
