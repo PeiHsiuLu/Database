@@ -605,3 +605,8 @@ FROM students
 LEFT JOIN  enrollments ON  students.student_id = enrollments.student_id
 ```
 ### Week9: NOSQL-MONGODB基礎語法
+#### databases   
+- 顯示資料庫
+  ```mongodb
+  show dbs
+  ```
