@@ -52,11 +52,15 @@
 這次作業，主要是練習SQL CRUD 如何運用在專案內。  
 
 
-**圖一：主頁**  
+**圖一：主頁：學生清單(Read Students)**  
+包含所有的學生、刪除學生按鈕、搜尋學生  
 ![image](https://github.com/user-attachments/assets/82ec9d20-03e0-4eef-9fce-e1ffa634b0dd)  
 
-**圖二：view**  
-![image](https://github.com/user-attachments/assets/fb20b7db-331c-4f1e-a130-a25c36480bc6)
+**圖二：新增學生**  
+![image](https://github.com/user-attachments/assets/fb20b7db-331c-4f1e-a130-a25c36480bc6)  
+
+**圖三：
+
 
 
 
