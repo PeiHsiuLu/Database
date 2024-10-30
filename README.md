@@ -115,6 +115,10 @@
 
 
 ### Week 1: Course Introduction (0902-0908)  
+簡單介紹資料庫系統這門課會學習到的內容：  
+- MySQL + Flask + CRUD
+- NoSQL + Flask + CRUD (MongoDB)
+- 利用可堂所學做一份資料庫期末專題  
 
 ### Week 2: Install Flask and SQL in Flask (0909-0915)
 
