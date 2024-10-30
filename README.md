@@ -51,16 +51,48 @@
 ### HW2 學生修課成績管理系統  
 這次作業，主要是練習SQL CRUD 如何運用在專案內。  
 
-
-**圖一：主頁：學生清單(Read Students)**  
+#### studnts table
+**圖一：主頁：學生清單(Read students)**  
 包含所有的學生、刪除學生按鈕、搜尋學生  
 ![image](https://github.com/user-attachments/assets/82ec9d20-03e0-4eef-9fce-e1ffa634b0dd)  
+**圖二：更新學生**  
+![image](https://github.com/user-attachments/assets/ff1220e2-f3d8-4a01-9835-23656d547817)
 
-**圖二：新增學生**  
-![image](https://github.com/user-attachments/assets/fb20b7db-331c-4f1e-a130-a25c36480bc6)  
+  
+**圖三：新增學生**  
+![image](https://github.com/user-attachments/assets/e509dec8-d47c-45b4-b8e6-101127ab204d)  
 
-**圖三：
+**圖四：students table**  
+![image](https://github.com/user-attachments/assets/c28f7e5c-7d93-4b25-9d2e-1aafc90deeb3)  
 
+#### enrollments table
+**圖五：enrollments(read, delete, update Enrollments)**  
+- 讀取Enrollments的數據，其中涵蓋刪除數據、修改數據。
+- GPA Records會同步每一個學期的紀錄
+![image](https://github.com/user-attachments/assets/6a51d59a-4ca5-41d4-b6ba-a572b59bd574)
+
+**圖六：Add enrollments**  
+增加 Enrollments table 的數據  
+![image](https://github.com/user-attachments/assets/dafc059c-623f-41f1-84a8-4e2e803a48c8)  
+**圖七：更新 enrollments 數據**  
+![image](https://github.com/user-attachments/assets/6bd08385-ddc0-46a6-9526-3be1964f1826)
+
+**圖八：enrollments table**  
+![image](https://github.com/user-attachments/assets/dccaecbd-000e-4972-855d-f0910e0aa508)  
+
+#### Courses table  
+**圖九：read, delete courses**  
+課程列表清單(讀取、刪除、修改)  
+![image](https://github.com/user-attachments/assets/88dafc00-7a36-4457-acaa-cd03b31b23ae)  
+
+**圖十：update courses**  
+刪除courses數據  
+![image](https://github.com/user-attachments/assets/ccfa7fbc-a073-4698-a365-d0b7c3929dda)  
+**圖十一：Add courses**  
+新增courses數據  
+![image](https://github.com/user-attachments/assets/5460cba4-aa7b-498a-831e-5d7852448ee9)  
+**圖十二：courses table**  
+![image](https://github.com/user-attachments/assets/616c2914-5076-40e1-b85b-32d8268818cf)  
 
 
 
