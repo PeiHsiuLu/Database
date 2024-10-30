@@ -21,7 +21,7 @@
   - [1. HW1 程式碼](https://github.com/PeiHsiuLu/Database/tree/main/Week3/mysql_and_flask)  
   - [2. HW1 影片](https://youtu.be/846RmjGRTiY)
   - 補充：MySQLWorkbench及時儲存原影片只錄製到已儲存的資料，後續有再補一隻短片放在影片簡介區證明資料可在SQL被及時儲存  
-- [HW2 SQL CRUD 學生修課成績管理系統]()
+- [HW2 SQL CRUD 學生修課成績管理系統](#hw2-學生修課成績管理系統)
   - [ER_Diagram](https://github.com/PeiHsiuLu/Database/blob/main/students/HW2_ERdiagram.png)
   - [原始碼](https://github.com/PeiHsiuLu/Database/tree/main/students)
   - [影片](https://www.youtube.com/watch?v=REO3aCTiBXE)
@@ -47,6 +47,16 @@
 ![image](https://github.com/user-attachments/assets/ab0b6529-c723-4ef3-b487-91efb7f63e93)
 - workbench存放公司員工的登入資料，id,name,password 照順序排列，密碼用哈希值亂數隨機儲存。
 - 相同的信箱不可再被註冊
+
+### HW2 學生修課成績管理系統  
+這次作業，主要是練習SQL CRUD 如何運用在專案內。  
+
+
+**圖一：主頁**  
+![image](https://github.com/user-attachments/assets/82ec9d20-03e0-4eef-9fce-e1ffa634b0dd)  
+
+**圖二：view**  
+![image](https://github.com/user-attachments/assets/fb20b7db-331c-4f1e-a130-a25c36480bc6)
 
 
 
