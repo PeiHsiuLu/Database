@@ -110,7 +110,7 @@
 - [3. Week 3: Flask Connect to MySQL (0916-0922)](#week-3-flask-connect-to-mysql-0916-0922)
 - [4. Week 4: MySQL Instruction and Introduction (0923-0930)](#week-4-mysql-instruction-and-introduction-0923-0930)
 - [5. Week 5-8: MySQL CRUD](#week-5-8-mysql-crud)
-- [6. Week 9: NOSQL-MONGODB基礎語法](#week9-NOSQL-MONGODB基礎語法)  
+- [6. Week 9: NOSQL-MONGODB基礎語法](#Week9-nosql-mongodb基礎語法)  
 
 
 
