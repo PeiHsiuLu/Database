@@ -51,15 +51,12 @@
 ### HW2 學生修課成績管理系統  
 這次作業，主要是練習SQL CRUD 如何運用在專案內。  
 
-
-**圖一：主頁：學生清單(Read Students)**  
+#### studnts table
+**圖一：主頁：學生清單(Read students)**  
 包含所有的學生、刪除學生按鈕、搜尋學生  
 ![image](https://github.com/user-attachments/assets/82ec9d20-03e0-4eef-9fce-e1ffa634b0dd)  
-
-**圖二：新增學生**  
-![image](https://github.com/user-attachments/assets/fb20b7db-331c-4f1e-a130-a25c36480bc6)  
-
-
+**圖二：更新學生**  
+![image](https://github.com/user-attachments/assets/ff1220e2-f3d8-4a01-9835-23656d547817)
 
 **圖三：新增學生**  
 ![image](https://github.com/user-attachments/assets/e509dec8-d47c-45b4-b8e6-101127ab204d)  
