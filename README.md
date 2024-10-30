@@ -605,8 +605,40 @@ FROM students
 LEFT JOIN  enrollments ON  students.student_id = enrollments.student_id
 ```
 ### Week9: NOSQL-MONGODB基礎語法
+這一些語法，皆需要在mongodbshell內執行  
+Mongodb 資料用 json 格式儲存。  
 #### databases   
-- 顯示資料庫
+- 顯示資料庫  
   ```sql
   show dbs
   ```
+- 使用資料庫  
+  ```sql
+  use 資料庫名稱 
+  ```
+- 創建表格(只有創建表格，資料庫才會出現)  
+  ```sql
+  db.createCollection("表格名稱")
+  ```
+- 捨棄資料庫  
+  ```sql
+  db.dropDatabase()
+  ```
+#### insert
+- 插入表格內的一個值  
+  ```sql
+  db.表格名稱.insertOne({name:"Louis Lin",age:20,gpa:4.2})
+  ```
+- 尋找表格內有多少值  
+  ```sql
+  db.表格名稱.find()
+  ```
+- 插入表格內多個值 (資料可以插入長短不一、種類不一的資料)
+  ```sql
+  db.表格名稱.insertMany([{name:"Lee",age:30},{name:"Hua",age:40,gpa:4.02}])
+  ```
+#### datatypes
+
+
+
+  
