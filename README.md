@@ -682,7 +682,133 @@ Mongodb 資料用 json 格式儲存。
   ![image](https://github.com/user-attachments/assets/ece05887-0435-4018-9c10-4e85c2dad504)
 
 #### update  
+- set
+  可以修改單一現有數值或是多個現有數值。
+  ({filter},{update})  
 
+  設定單一數值 name 為 "Leee"   
+  ```sql
+  db.students.updateOne({_id: ObjectId('6721cb2db82fc5621d86b01d')},{$set:{name:"Leee"}})
+  ```
+  設定許多數值為gpa:4.30  
+  ```sql
+  db.students.updateMany({},{$set:{gpa:4.30}})  
+  ```
 
+- unset
+  可以刪除一筆數值
+  ```sql
+  db.students.updateOne({_id: ObjectId('6721d435b82fc5621d86b024')},{$unset:{age:"" }})
+  ```
+  以上範例為刪除年齡的數據(刪除的數據皆適用""代替)
+
+  刪除多筆相同的數據
+  ```sql
+  db.students.updateMany({},{$unset:{gpa:4.25}})
+  ```
+  以上範例刪除所有GPA：4.25的數據
+- exists 存在
+  $exists:true >> 其值存在; $exists:false >> 其值不存在
+  通常exists的作用是用來作為篩選值是否存在，否則則...   
+  ```sql
+  db.students.updateMany({fulltime:{$exists:false}},{$set:{fulltime:true}})
+  ```
+- MongodbCompass
+  鉛筆可以用來變更compass內的值   
+  ![image](https://github.com/user-attachments/assets/d317cb0a-8d5f-4dae-a281-aef9d4a20ab9)
+
+#### delete  
+
+- 刪除一筆數據  
+  ```sql
+  db.students.deleteOne({name:"Louis Lin})
+  ```
+- 刪除多筆數據
+  ```sql
+  db.students.deleteMany(name:{exists:false})
+  ```
+#### comparison operator($)   
+通常是用做條件來搜尋一個特定條件的事物  
+- $ne (不等於 not equal to)
+  ```sql
+  db.students.find({age:{$ne:17}})
+  ```
+- $lt, $lte (小於，小於等於)
+  ```sql
+   db.students.find({age:{$lte:25}})
+  ```
+- $gt, $gte
+  ```sql
+  db.students.find({age:{$gte:25}})
+  ```
+- 尋找範圍
+  ```sql
+  db.students.find({age:{$gte:20,$lt:25}})
+  ```
+- 尋找涵蓋在陣列中的值 ($in)
+  ```sql
+   db.students.find({name:{$in:["Larry","John","LEE"]}}
+  ```
+- 尋找不涵蓋在陣列內的值 ($nin)
+  ```sql
+   db.students.find({name:{$nin:["Larry"]}})
+  ```
+- 在MongoDBcompass內的用法
+  ![image](https://github.com/user-attachments/assets/2abb78b7-ae1b-4207-9e1c-4f4b9a4f775f)
+
+#### logic operators
+- $and(且，兩個條件必須皆成立)
+- $or (或，一個條件成立即可)
+- $not (非)
+- $nor (兩個皆不是)
+```sql
+db.students.find({$and:[{age:{$lte:21}},{fulltime:true}]})
+```
+```sql
+db.students.find({$or:[{age:{$lte:21}},{fulltime:true}]})
+```
+```sql
+db.students.find({$nor:[{age:{$lte:21}},{fulltime:true}]})
+```
+```sql
+db.students.find({age:{$not:{$gte:20}}})
+```
+
+#### Index  
+創建一個索引會非常消耗系統資源，所以要謹慎使用。(背後有大量的Binary tree 演算法在背後計算著)  
+- 創建索引
+  - 升冪：1
+  - 降冪：-1 
+```sql
+db.students.createIndex({name:1})
+```
+- 顯示查詢的執行資料
+  ```sql
+   db.students.find({name:"Sarah"}).explain("executionStats")
+  ```
+- 顯示目前所有的索引值
+  ```sql
+  db.students.getIndexes()
+  ```
+- 捨棄索引值
+  ```sql
+  db.students.dropIndex("name_1")
+  ```
+index 在MongoDBCompass的位置  
+####  collections
+- 顯示 collection
+  ```sql
+  show collections
+  ```
+- 建立 collection
+  ```sql
+  db.createCollection("teacher",{capped:true,size:100000000,max:100},{autoIndexId:false})
+  ```
+  中間的值是用來建立集合。(有限集合)
+- 捨棄collection
+  ```sql
+  db.teacher.drop()
+  ```  
+  
 
   
