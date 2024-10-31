@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Manager</title>
+    <style>
+        /* 背景樣式 */
+        body {
+            background-image: url('https://raw.githubusercontent.com/PeiHsiuLu/Database/main/planet.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* 主標題 */
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #00e6e6;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* 新增筆記表單樣式 */
+        form {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        input, textarea {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #00e6e6;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background-color: #00e6e6;
+            color: #000;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 230, 230, 0.4);
+        }
+
+        button:hover {
+            background-color: #00cccc;
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(0, 204, 204, 0.6);
+        }
+
+        /* 筆記列表樣式 */
+        .notes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap:20px;
+            max-width: 1200px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        /* 每個筆記卡片 */
+        .note-item {
+            border: 1px solid #00e6e6;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .note-item h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #00e6e6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .note-item p {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .note-item small {
+            display: block;
+            margin-top: 10px;
+            color: #999;
+        }
+        /* 更新和刪除按鈕的容器樣式 */
+        .update-delete-form {
+            display: flex;
+            flex-direction: column; /* 垂直堆疊 */
+            gap: 10px; /* 按鈕之間的間距 */
+            margin-top: 15px;
+            width: 100%;
+            align-items: center; /* 按鈕在卡片中水平居中 */
+        }
+
+        /* 編輯和刪除按鈕的樣式 */
+        .edit-button, .delete-button {
+            width: 80%; /* 統一寬度 */
+            padding: 10px 0;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            background-color: transparent;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        /* 編輯按鈕樣式 */
+        .edit-button {
+            border-color: #4CAF50; /* 綠色邊框 */
+            color: #4CAF50;
+        }
+
+        .edit-button:hover {
+            background-color: rgba(76, 175, 80, 0.2); /* 懸停時增加透明背景 */
+            color: #fff; /* 懸停時文字變白 */
+        }
+
+        /* 刪除按鈕樣式 */
+        .delete-button {
+            border-color: #f44336; /* 紅色邊框 */
+            color: #f44336;
+        }
+
+        .delete-button:hover {
+            background-color: rgba(244, 67, 54, 0.2); /* 懸停時增加透明背景 */
+            color: #fff; /* 懸停時文字變白 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Notes Manager</h1>
+    <form action="{{ url_for('add_note') }}" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+    <ul class="notes-container">
+    {% for note in notes %}
+        <li class="note-item">
+            <h2>{{ note['title'] }}</h2>
+            <p>{{ note['content'] }}</p>
+            <small>{{ note['date'] }}</small>
+            <div class="update-delete-form">
+                <a href="{{ url_for('edit_note', note_id=note['_id']) }}" class="edit-button">Edit</a>
+                <form action="{{ url_for('delete_note', note_id=note['_id']) }}" method="POST" style="margin: 0;">
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
