@@ -814,32 +814,7 @@ index 在MongoDBCompass的位置
   ```  
 
 ### Week 10 MongoDB&Flask
-#### 事前作業
-1. 連接 MongoDB 與 python-flask 前，必須先在終端機加入以下指令，並進入虛擬環境進行下一步的操作：
-    ```bash
-    python -m venv env
-    .\env\Scripts\Activate
-    pip install flask flask-pymongo python-dotenv
-    ```
    
-2. 接著建立一個空的 `.flaskenv` 檔：
-    ```bash
-    New-Item -Path .flaskenv -ItemType File
-    ```
-
-3. 設定 Flask 應用程式和開發環境變數：
-    ```bash
-    FLASK_APP=資料夾
-    FLASK_ENV=development
-    ```
-
-4. 建立 `templates` 資料夾以供後續使用：
-    ```bash
-    mkdir templates
-    ```
-
-5. 接著在 `templates` 建立 `index.html` 並在一處資料夾下方建立 `static` 資料夾，資料夾下放建置 CSS 檔以供後續使用。
-
 #### 關於 Python 中 Flask app 的一些基礎語法
 ```python
 from flask import Flask, render_template, request, redirect, url_for
