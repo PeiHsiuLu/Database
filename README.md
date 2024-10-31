@@ -107,7 +107,8 @@
 ![image](https://github.com/user-attachments/assets/b1094939-a1e4-4f1c-a772-4b1c97486b91)  
 ### 編輯頁面  
 ![image](https://github.com/user-attachments/assets/9f2e51b4-25ab-4a44-b8d1-7c3ee91ee11d)   
-### MongoDB compass
+## MongoDB compass  
+凡是被新增的note，資料都會被儲存進MongoDB Compass  
 ![image](https://github.com/user-attachments/assets/a121eefa-1ceb-41d9-a665-ccde6e8d1389)   
 
 
