@@ -27,7 +27,7 @@
   - [原始碼](https://github.com/PeiHsiuLu/Database/tree/main/students)
   - [影片](https://www.youtube.com/watch?v=REO3aCTiBXE)
 - [HW3 MongoDB Flask: The Note Manager](#hw3-mongodb-flask-the-note-manager)
-  - [程式碼](
+  - [程式碼](https://github.com/PeiHsiuLu/Database/tree/main/HW3)  
   - [影片](https://www.youtube.com/watch?v=WhY-jG7982g)  
 - [HW4]()
 ### HW1 簡易登入/註冊系統
