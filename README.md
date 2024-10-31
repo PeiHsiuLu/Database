@@ -26,7 +26,9 @@
   - [ER_Diagram](https://github.com/PeiHsiuLu/Database/blob/main/students/HW2_ERdiagram.png)
   - [原始碼](https://github.com/PeiHsiuLu/Database/tree/main/students)
   - [影片](https://www.youtube.com/watch?v=REO3aCTiBXE)
-- [HW3]()
+- [HW3 MongoDB Flask: The Note Manager](#hw3-mongodb-flask-the-note-manager)
+  - [程式碼](
+  - [影片]((https://www.youtube.com/watch?v=WhY-jG7982g))  
 - [HW4]()
 ### HW1 簡易登入/註冊系統
 這次作業主要是練習，利用 Flask 結合 MySQL 製作一個簡易的登入註冊頁面。同時，做到可以將已註冊的帳號、密碼利用 MySQL 儲存。  
@@ -95,7 +97,7 @@
 **圖十二：courses table**  
 ![image](https://github.com/user-attachments/assets/616c2914-5076-40e1-b85b-32d8268818cf) 
 
-
+# HW3 MongoDB Flask: the note manager
 
 
 
