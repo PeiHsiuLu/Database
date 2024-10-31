@@ -812,5 +812,78 @@ index 在MongoDBCompass的位置
   ```  
 
 ### Week 10 MongoDB&Flask
+#### 事前作業
+1. 連接 MongoDB 與 python-flask 前，必須先在終端機加入以下指令，並進入虛擬環境進行下一步的操作：
+    ```bash
+    python -m venv env
+    .\env\Scripts\Activate
+    pip install flask flask-pymongo python-dotenv
+    ```
+   
+2. 接著建立一個空的 `.flaskenv` 檔：
+    ```bash
+    New-Item -Path .flaskenv -ItemType File
+    ```
 
-  
+3. 設定 Flask 應用程式和開發環境變數：
+    ```bash
+    FLASK_APP=資料夾
+    FLASK_ENV=development
+    ```
+
+4. 建立 `templates` 資料夾以供後續使用：
+    ```bash
+    mkdir templates
+    ```
+
+5. 接著在 `templates` 建立 `index.html` 並在一處資料夾下方建立 `static` 資料夾，資料夾下放建置 CSS 檔以供後續使用。
+
+#### 關於 Python 中 Flask app 的一些基礎語法
+```python
+from flask import Flask, render_template, request, redirect, url_for
+from flask_pymongo import PyMongo
+import os
+
+app = Flask(__name__)
+
+# 設定 MongoDB 連線
+app.config["MONGO_URI"] = "mongodb://localhost:27017/notes"
+mongo = PyMongo(app)
+
+@app.route('/')
+def index():
+    return "hello"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+- from flask import Flask: 從 Flask 框架中引入 Flask 類別，這是用來建立 Flask 應用程式的核心。
+- render_template：用於渲染 HTML 模板文件（例如 .html 文件）。
+- request: 允許 Flask 處理 HTTP 請求中的數據，例如 GET 或 POST 請求的資料。
+- redirect：用來重定向使用者到不同的 URL。
+- url_for：根據函數名稱生成 URL，便於路徑的動態調整。
+```python
+app = Flask(__name__)
+```
+- app = Flask(__name__)：建立一個 Flask 應用程式物件 app，並將當前模組的名稱（__name__）作為參數傳入，Flask 會根據這個名稱來決定應用程式的根路徑。
+```python
+# 設定 MongoDB 連線
+app.config["MONGO_URI"] = "mongodb://localhost:27017/notes"
+mongo = PyMongo(app)
+```
+- app.config["MONGO_URI"] = "mongodb://localhost:27017/notes"：設置 Flask 應用程式的 MongoDB 連線 URI，指定 MongoDB 伺服器位於本地端（localhost），使用端口 27017，並且使用名為 notes 的資料庫。
+- mongo = PyMongo(app)：將 Flask 應用程式 app 與 MongoDB 進行連接，並將 MongoDB 連接實例儲存為 mongo，用於後續的數據操作。
+```python
+@app.route('/')
+def index():
+    return "hello"
+```
+- @app.route('/')：設置 Flask 路由，表示當用戶訪問根路徑 / 時，會執行下面的 index() 函數。
+- def index():：定義 index 函數，用於處理根路徑的請求。
+- return "hello"：回傳 "hello" 字串，作為訪問 / 路徑時的 HTTP 回應內容。
+```python
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+- if __name__ == "__main__":：這段程式碼的意思是，當此文件被直接執行時，會執行其內部的代碼。這在 Python 中用於區分模組是直接執行還是被其他模組引入。
+- app.run(debug=True)：啟動 Flask 應用程式，並開啟除錯模式（debug=True），在此模式下，程式碼有變更時 Flask 會自動重啟，並在發生錯誤時顯示詳細的錯誤訊息。  
