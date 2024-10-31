@@ -98,6 +98,22 @@
 ![image](https://github.com/user-attachments/assets/616c2914-5076-40e1-b85b-32d8268818cf) 
 
 # HW3 MongoDB Flask: the note manager
+## 動機
+- 練習 MongoDB Flask 的建置
+- 做一個備忘錄網頁
+## 功能
+### 主頁
+- 目前的note
+- 添加 note
+- 編輯 note
+- 刪除 note
+![image](https://github.com/user-attachments/assets/b1094939-a1e4-4f1c-a772-4b1c97486b91)  
+### 編輯頁面  
+![image](https://github.com/user-attachments/assets/9f2e51b4-25ab-4a44-b8d1-7c3ee91ee11d)   
+### MongoDB compass
+![image](https://github.com/user-attachments/assets/a121eefa-1ceb-41d9-a665-ccde6e8d1389)   
+
+
 
 
 
