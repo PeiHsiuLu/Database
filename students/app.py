@@ -301,6 +301,30 @@ def courses():
     conn.close()
     return render_template('courses.html', courses=courses, search_query=search_query)
 
+# 顯示學生和選課信息（使用 JOIN）
+@app.route('/join', methods=['GET'])
+def student_enrollments():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # 修改的 JOIN 查詢 - 取得 student_id, course_name 和 grade
+    query = """
+    SELECT 
+        s.student_id, c.course_name, e.grade
+    FROM students s
+    INNER JOIN enrollments e ON s.student_id = e.student_id
+    INNER JOIN courses c ON e.course_name = c.course_name
+    ORDER BY s.student_id;
+    """
+    cursor.execute(query)
+    result = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    # 渲染結果頁面
+    return render_template('student_courses.html', enrollments=result)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
