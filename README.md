@@ -30,7 +30,7 @@
 - [HW3 MongoDB Flask: The Note Manager](#hw3-mongodb-flask-the-note-manager)
   - [程式碼](https://github.com/PeiHsiuLu/Database/tree/main/HW3)  
   - [影片](https://www.youtube.com/watch?v=WhY-jG7982g)  
-- [HW4 MongoDB Flask: HRIS Management]()
+- [HW4 MongoDB Flask: HR Management System](#hw4-mongodb-hr-management-system)
   - [程式碼](https://github.com/PeiHsiuLu/Database/tree/main/HW4)  
   - [影片](https://www.youtube.com/watch?v=IISaKSBv3jo) 
 ### HW1 簡易登入/註冊系統
@@ -114,6 +114,7 @@
 凡是被新增的note，資料都會被儲存進MongoDB Compass  
 ![image](https://github.com/user-attachments/assets/a121eefa-1ceb-41d9-a665-ccde6e8d1389)   
 
+# HW4 MongoDB HR Management System
 
 
 
