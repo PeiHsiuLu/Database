@@ -116,6 +116,14 @@
 
 # HW4 MongoDB HR Management System
 
+**圖一：MongoDB Compass**  
+![image](https://github.com/user-attachments/assets/0024aabf-ea9b-45c5-b64d-6bd0386f81e1)    
+**圖二：主頁**  
+![image](https://github.com/user-attachments/assets/aa4edb1f-dcee-4f8d-a0d3-38fe278ef6d6)  
+**圖三：搜尋頁面**  
+![image](https://github.com/user-attachments/assets/b7e751d2-f89d-4332-9eea-dde6714cbc3b)  
+**圖四：搜尋結果**  
+![image](https://github.com/user-attachments/assets/5ba1936f-4524-471d-8e1a-c0fe054c5443)
 
 
 
