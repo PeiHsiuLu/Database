@@ -31,8 +31,8 @@
   - [程式碼](https://github.com/PeiHsiuLu/Database/tree/main/HW3)  
   - [影片](https://www.youtube.com/watch?v=WhY-jG7982g)  
 - [HW4 MongoDB Flask: HRIS Management]()
-  -[程式碼]  
-  -[影片]  
+  - [程式碼]  
+  - [影片]  
 ### HW1 簡易登入/註冊系統
 這次作業主要是練習，利用 Flask 結合 MySQL 製作一個簡易的登入註冊頁面。同時，做到可以將已註冊的帳號、密碼利用 MySQL 儲存。  
 
